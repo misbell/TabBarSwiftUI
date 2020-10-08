@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import SwiftUI
 
-class ViewController: UIViewController {
+class ViewController1: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBSegueAction func doSegue(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: SwiftUIView1())
+    }
+    
 }
 
