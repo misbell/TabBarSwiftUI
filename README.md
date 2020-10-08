@@ -6,7 +6,8 @@ This example shows how to make two SwiftUI Views on different tabs work on a Sto
 
 Things to make sure of
 
-1. You have container views REPLACE the view in the UIViewController.
+1. You have container views REPLACE the view in the UIViewController. DO NOT make the container view a subview of the initial view. 
+Just plop the containerview right on top of the view on the View Outline.
 2. The tab segues to the UIViewController, not the Hosting Controller.
 3. You need the UIHostingController on the storyboard even though it's wrapped in the segue in the View Controller
 4. You need two subclasses of UIViewController, because the embedded seques go there.
